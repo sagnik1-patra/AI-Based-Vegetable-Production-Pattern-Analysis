@@ -1,0 +1,38 @@
+project:
+  name: AI-Based Vegetable Production Pattern Analysis
+  dataset: Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv
+  dataset_rows: 228
+  dataset_columns: 12
+features:
+- Potato
+- Tomato
+- Brinjal
+- Beans
+- Cluster Beans
+- Onion
+- Green chillies
+- Total Leafy Vegetables
+- Total Guard Variety Vegetables
+target:
+  name: Production_Category
+  classes:
+  - High
+  - Low
+  - Medium
+  low_threshold: 5161.01
+  medium_threshold: 28353.32
+random_forest:
+  algorithm: RandomForestClassifier
+  number_of_trees: 300
+  random_state: 42
+  test_accuracy: 0.8913043478260869
+neural_network:
+  input_features: 9
+  hidden_layers:
+  - 64
+  - 32
+  - 16
+  output_classes: 3
+  optimizer: adam
+  loss: categorical_crossentropy
+  test_accuracy: 0.9130434989929199

@@ -1,0 +1,87 @@
+{
+    "project_name": "AI-Based Vegetable Production Pattern Analysis",
+    "dataset": {
+        "file": "C:\\Users\\sagni\\Downloads\\AI-Based Vegetable Production Pattern Analysis\\Production_of_Important_Vegetable_crops_In_Tonnes_2019_20.csv",
+        "rows": 228,
+        "columns": 12
+    },
+    "taluk_column": "Taluks",
+    "input_features": [
+        "Potato",
+        "Tomato",
+        "Brinjal",
+        "Beans",
+        "Cluster Beans",
+        "Onion",
+        "Green chillies",
+        "Total Leafy Vegetables",
+        "Total Guard Variety Vegetables"
+    ],
+    "number_of_features": 9,
+    "target": "Production_Category",
+    "production_classes": [
+        "High",
+        "Low",
+        "Medium"
+    ],
+    "production_thresholds": {
+        "low_maximum": 5161.01,
+        "medium_maximum": 28353.32,
+        "high_minimum": 28353.32
+    },
+    "training": {
+        "training_samples": 182,
+        "testing_samples": 46,
+        "test_size": 0.2,
+        "random_state": 42
+    },
+    "model_performance": {
+        "random_forest_accuracy": 0.8913043478260869,
+        "neural_network_accuracy": 0.9130434989929199,
+        "neural_network_loss": 0.16590948402881622
+    },
+    "models": {
+        "random_forest": "vegetable_rf_model.pkl",
+        "neural_network": "vegetable_nn_model.h5",
+        "scaler": "scaler.pkl",
+        "label_encoder": "label_encoder.pkl"
+    },
+    "feature_importance": [
+        {
+            "Feature": "Onion",
+            "Importance": 0.2595704538828854
+        },
+        {
+            "Feature": "Tomato",
+            "Importance": 0.2523164603951451
+        },
+        {
+            "Feature": "Brinjal",
+            "Importance": 0.13275639902941624
+        },
+        {
+            "Feature": "Total Guard Variety Vegetables",
+            "Importance": 0.1036845734501763
+        },
+        {
+            "Feature": "Green chillies",
+            "Importance": 0.08156222106165552
+        },
+        {
+            "Feature": "Cluster Beans",
+            "Importance": 0.04962978371689682
+        },
+        {
+            "Feature": "Beans",
+            "Importance": 0.047121016328445425
+        },
+        {
+            "Feature": "Total Leafy Vegetables",
+            "Importance": 0.039365214290832784
+        },
+        {
+            "Feature": "Potato",
+            "Importance": 0.0339938778445464
+        }
+    ]
+}
